@@ -1,0 +1,3 @@
+APPID=pro
+KEY_IOS=yMhLPzyDMMU3hrKjmS-1qictoIdfSUetnFlNv
+KEY_ANDROID=F-smrXwSwvBIAXiMIncrvNnJAxKM_Zs_Z1pBn

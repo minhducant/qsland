@@ -1,0 +1,36 @@
+export interface T_userData {
+    address: any
+    avatar: any
+    birthday: any
+    cb_address: any
+    cb_city_id: any
+    cb_district_id: any
+    cb_ward_id: any
+    city_id: any
+    cmt_address: any
+    cmt_date: any
+    cmt_expiry: any
+    cmt_image: any
+    cmt_number: any
+    cmt_province: any
+    cmt_status: any
+    code_staff: any
+    company_id: any
+    created_at: any
+    deleted_at: any
+    district_id: any
+    email_contact: any
+    exchange_id: any
+    full_name: any
+    gender: any
+    id: any
+    marital_status: any
+    phone_contact: any
+    place_birth: any
+    position: any
+    social_insurance_code: any
+    updated_at: any
+    user_id: any
+    username: any
+    ward_id: any
+}

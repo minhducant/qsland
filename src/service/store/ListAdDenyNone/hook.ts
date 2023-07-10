@@ -1,0 +1,58 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { stores } from './store'
+import { useEffect, useRef } from 'react'
+import { useStoreApp } from '../index';
+import { Log } from '@utils';
+export const useListAdDenyNone = () => {
+    const {
+        data,
+        loading,
+        loading_more,
+        end_data,
+        time_request,
+        time_expired,
+        limit,
+        page,
+        time_click,
+        params,
+        count
+    } = useStoreApp(state => state.ListAdDenyNone)
+    const userData = useStoreApp(state => state.UserData)
+    const dispatch = useDispatch()
+    const paramsRef = useRef({ ...params, status: JSON.stringify([1]) })
+    const onRefresh = async () => {
+        let count_time = new Date().getTime() - time_request
+        if (count_time > time_click || time_request == 0) {
+            await dispatch(stores.updateSate({ loading: true }))
+            await dispatch(stores.getListAdDenyNone({ page: 1, limit, ...paramsRef.current }))
+            await dispatch(stores.getCountListAdDenyNone({ ...paramsRef.current }))
+            await dispatch(stores.updateSate({ loading: false }))
+        }
+    }
+    const updateParamsRef = (e = {}) => {
+        paramsRef.current = { ...paramsRef.current, ...e }
+        dispatch(stores.updateParams({ ...paramsRef.current, ...e }))
+    }
+    const onLoadMore = async () => {
+        if (loading_more || end_data) return
+        await dispatch(stores.updateSate({ loading_more: true }))
+        await dispatch(stores.getListAdDenyNone({ page: page + 1, limit, ...paramsRef.current }))
+        await dispatch(stores.updateSate({ loading_more: false }))
+    }
+    useEffect(() => {
+        let count_time = new Date().getTime() - time_request
+        if (count_time > time_expired || time_request == 0) onRefresh()
+    }, [time_request])
+    return {
+        data,
+        count,
+        loading,
+        loading_more,
+        end_data,
+        params,
+        updateParamsRef,
+        onRefresh,
+        onLoadMore,
+    }
+}
+

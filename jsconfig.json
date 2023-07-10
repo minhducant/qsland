@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets": ["./src/assets"],
+      "@api": ["./src/api"],
+      "@lib": ["./src/lib"],
+      "@mylib": ["./src/mylib"],
+      "@screen": ["./src/screen"],
+      "@service": ["./src/service"],
+      "@navigation": ["./src/navigation"],
+      "@utils": ["./src/utils"],
+      "@components": ["./src/components"],
+      "@AddElectricityPayment": ["./src/screen/AddElectricityPayment"]
+    }
+  }
+}

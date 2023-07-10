@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1033148407226",
+    "project_id": "qs-land",
+    "storage_bucket": "qs-land.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033148407226:android:d28b98d3becd04a55b5183",
+        "android_client_info": {
+          "package_name": "com.stech.qsland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033148407226-e265aas8slcdtrfof9k23s0187pjt9u6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuLzU2RWJZ75aYtP5eWb-LAG0iQ5UvdMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033148407226-e265aas8slcdtrfof9k23s0187pjt9u6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1033148407226-d8faulr9j7gtcump47db1hkhi1pjhd68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stech.qsland"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
